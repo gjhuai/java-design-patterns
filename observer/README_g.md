@@ -18,7 +18,7 @@ Observer模式提供给关联对象一种同步通信的手段，使某个对象
 
 ## Observer模式的结构
 
-![alt text](./etc/observer01.png "Observer")
+![alt text](./etc/observer01.jpg "Observer")
 
 ## Observer模式的角色：
 - Subject（被观察者）
