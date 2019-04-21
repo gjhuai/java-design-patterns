@@ -1,5 +1,4 @@
-Java：单例模式的七种写法
-转载出处：http://cantellow.javaeye.com/blog/838473
+Java单例模式的七种写法: http://cantellow.javaeye.com/blog/838473
 
 ## 第一种（懒汉，线程不安全）：
 ```java
