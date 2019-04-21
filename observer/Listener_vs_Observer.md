@@ -21,5 +21,5 @@ jdk不仅提供了Observable类、Observer接口支持观察者模式，而且�
 - （3）两者都需要自己定义并实现触发事件的通知。但Observable需要注意要在通知Observer之前调用jdk提供的setChanged()。  
 
 ## 实例
-[java事件处理机制](http://blog.csdn.net/xiaolang85/article/details/5316859)
-[Java:应用Observer接口实践Observer模式](http://blog.51cto.com/zhangjunhd/68949) 
+- [java事件处理机制](http://blog.csdn.net/xiaolang85/article/details/5316859)
+- [Java应用Observer接口实践Observer模式](http://blog.51cto.com/zhangjunhd/68949)

@@ -2,6 +2,7 @@
 ## Observer模式的概念
 
 Observer模式是行为模式之一，它的作用是当一个对象的状态发生变化时，能够自动通知其他关联对象，自动刷新对象状态。
+
 Observer模式提供给关联对象一种同步通信的手段，使某个对象与依赖它的其他对象之间保持状态同步。
 
 ## Observer模式的典型应用
@@ -153,7 +154,7 @@ class News {
 ```
 
 执行Client，输出结果：
-
+```
 > C:\Observer>javac *.java
 > C:\Observer>java Client
 > News published:Hello news
@@ -161,7 +162,7 @@ class News {
 > Mail to subscriber. A news published with title:Hello news
 > C:\Observer>
 > NewsPublisher通过setChanged()与notifyObservers(Object)方法通知Observer对象SubscriberObserver与ManagerObserver。
-
+```
 
 ## 不使用JDK支持的情况下的代码
 
