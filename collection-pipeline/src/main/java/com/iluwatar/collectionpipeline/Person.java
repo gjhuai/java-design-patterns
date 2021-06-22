@@ -1,6 +1,6 @@
-/**
+/*
  * The MIT License
- * Copyright (c) 2014 Ilkka Seppälä
+ * Copyright © 2014-2021 Ilkka Seppälä
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -20,25 +20,20 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 package com.iluwatar.collectionpipeline;
 
 import java.util.List;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 /**
  * A Person class that has the list of cars that the person owns and use.
  */
+@Getter
+@RequiredArgsConstructor
 public class Person {
-  private List<Car> cars;
 
-  /**
-   * Constructor to create an instance of person.
-   * @param cars the list of cars owned
-   */
-  public Person(List<Car> cars) {
-    this.cars = cars;
-  }
+  private final List<Car> cars;
 
-  public List<Car> getCars() {
-    return cars;
-  }
 }

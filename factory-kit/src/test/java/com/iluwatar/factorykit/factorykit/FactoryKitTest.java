@@ -1,6 +1,6 @@
-  /**
+/*
  * The MIT License
- * Copyright (c) 2014-2016 Ilkka Seppälä
+ * Copyright © 2014-2021 Ilkka Seppälä
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +20,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 package com.iluwatar.factorykit.factorykit;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.iluwatar.factorykit.Axe;
 import com.iluwatar.factorykit.Spear;
@@ -31,17 +34,15 @@ import com.iluwatar.factorykit.WeaponType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-  /**
- *  Test Factory Kit Pattern
+/**
+ * Test Factory Kit Pattern
  */
-public class FactoryKitTest {
+class FactoryKitTest {
 
   private WeaponFactory factory;
 
   @BeforeEach
-  public void init() {
+  void init() {
     factory = WeaponFactory.factory(builder -> {
       builder.add(WeaponType.SPEAR, Spear::new);
       builder.add(WeaponType.AXE, Axe::new);
@@ -50,30 +51,33 @@ public class FactoryKitTest {
   }
 
   /**
-   * Testing {@link WeaponFactory} to produce a SPEAR asserting that the Weapon is an instance of {@link Spear}
+   * Testing {@link WeaponFactory} to produce a SPEAR asserting that the Weapon is an instance of
+   * {@link Spear}
    */
   @Test
-  public void testSpearWeapon() {
-    Weapon weapon = factory.create(WeaponType.SPEAR);
+  void testSpearWeapon() {
+    var weapon = factory.create(WeaponType.SPEAR);
     verifyWeapon(weapon, Spear.class);
   }
 
   /**
-   * Testing {@link WeaponFactory} to produce a AXE asserting that the Weapon is an instance of {@link Axe}
+   * Testing {@link WeaponFactory} to produce a AXE asserting that the Weapon is an instance of
+   * {@link Axe}
    */
   @Test
-  public void testAxeWeapon() {
-    Weapon weapon = factory.create(WeaponType.AXE);
+  void testAxeWeapon() {
+    var weapon = factory.create(WeaponType.AXE);
     verifyWeapon(weapon, Axe.class);
   }
 
 
   /**
-   * Testing {@link WeaponFactory} to produce a SWORD asserting that the Weapon is an instance of {@link Sword}
+   * Testing {@link WeaponFactory} to produce a SWORD asserting that the Weapon is an instance of
+   * {@link Sword}
    */
   @Test
-  public void testWeapon() {
-    Weapon weapon = factory.create(WeaponType.SWORD);
+  void testWeapon() {
+    var weapon = factory.create(WeaponType.SWORD);
     verifyWeapon(weapon, Sword.class);
   }
 
